@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hilo.entities">
+	<class name="Reviews" table="reviews">
+		<id name="reviewNo" column="review_no">
+			<generator class="hilo">
+				<param name="table">review_table</param>
+				<param name="column">review_sequence_number</param>
+				<param name="max_lo">5</param>
+			</generator>
+		</id>
+		<property name="reviewName" column="review_name" />
+		<property name="category" column="category" />
+		<property name="productName" column="product_name"/>
+		<property name="reviewDate" column="review_date"/>
+	</class>
+</hibernate-mapping>
