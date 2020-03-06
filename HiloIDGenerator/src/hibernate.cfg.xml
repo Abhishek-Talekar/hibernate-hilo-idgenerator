@@ -4,12 +4,12 @@
         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 	<session-factory>
-		<property name="connecton.driver_class">com.mysql.cj.jdbc.Driver</property>
-		<property name="connecton.url">jdbc:mysql://localhost:3306/common</property>
-		<property name="connecton.username">root</property>
-		<property name="connecton.password">root123</property>
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/common</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root123</property>
 		<property name="show_sql">true</property>
-		<property name="hiberntate-dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hibernate.hbm2ddl.auto">update</property>
 		<mapping resource="com/hilo/entities/Reviews.hbm.xml"/>
 	</session-factory>

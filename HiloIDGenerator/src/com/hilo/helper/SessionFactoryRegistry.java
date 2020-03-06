@@ -7,7 +7,7 @@ public class SessionFactoryRegistry {
 	private static SessionFactory sessionFactory = null;
 
 	static {
-		Configuration configuration = new Configuration().configure("hibernate-mysql.cfg.xml");
+		Configuration configuration = new Configuration().configure();
 		try {
 			sessionFactory = configuration.buildSessionFactory();
 		} catch (Throwable t) {
